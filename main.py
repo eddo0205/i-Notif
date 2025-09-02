@@ -2,8 +2,8 @@ import requests
 import os
 
 # Ambil data dari Secrets
-TOKEN = os.getenv("TELEGRAM_TOKEN")
-CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")
+TOKEN = os.environ("TELEGRAM_TOKEN")
+CHAT_ID = os.environ("TELEGRAM_CHAT_ID")
 
 def send_telegram(msg):
     url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
